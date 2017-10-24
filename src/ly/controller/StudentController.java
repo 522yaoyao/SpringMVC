@@ -14,17 +14,19 @@ import ly.model.Student;
 @RequestMapping("/student")
 public class StudentController {
 	
-	private static List<Student> studentList=new ArrayList<Student>();
+	private static String message="success";
+   private static List<Student> studentList=new ArrayList<Student>();
 	
 	static{
-		studentList.add(new Student(1,20,"张三"));
-		studentList.add(new Student(2,20,"李四"));
+		studentList.add(new Student(1,11,"张三"));
+		studentList.add(new Student(2,12,"李四"));
+		studentList.add(new Student(3,13,"王五"));
 	}
-	
-@RequestMapping("/list")	
+	@RequestMapping("/list")	
 	public ModelAndView list(){
 		ModelAndView mav=new ModelAndView();
 		mav.addObject("studentList",studentList);
+		mav.addObject("message", message);
 		mav.setViewName("student/list");
 		return mav;
 		
