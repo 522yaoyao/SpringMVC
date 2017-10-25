@@ -12,18 +12,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-操作：<%=message%>
+操作：<%=message%><br>
+<a href="<%=request.getContextPath()%>/student/preSave.do">添加</a>
 <table >
 <tr>
 <td>学号</td>
 <td>年龄</td>
 <td>姓名</td>
+<td>操作</td>
 </tr>
 <%for(int i=0;i<stList.size();i++){ %>
 <tr>
 <td><%=stList.get(i).getId()%></td>
 <td><%=stList.get(i).getAge()%></td>
 <td><%=stList.get(i).getName()%></td>
+<td><a href="preSave.do?id=<%=stList.get(i).getId()%>">修改</a></td>
 </tr>
 <%} %>
 </table>
