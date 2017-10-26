@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="student/save.do" method="post">
+<form action="save.do" method="post">
 <table>
 	<tr>
 		<th colspan="2">学生添加</th>

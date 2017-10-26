@@ -41,7 +41,19 @@ public class StudentController {
 			mav.setViewName("student/update");
 		}else mav.setViewName("student/add");
 		return mav;
-		
+	}
+	
+	@RequestMapping("/save")
+	public String save(Student student){//对象自动封装；
+		if(student.getId()!=0){//修改
+			Student s=studentList.get(student.getId()-1);
+			s.setName(student.getName());
+			s.setAge(student.getAge());
+		}else{//添加
+			studentList.add(student);			
+		}
+		// return "redirect:/student/list.do";
+		return "forward:/student/list.do";
 	}
          
 }
