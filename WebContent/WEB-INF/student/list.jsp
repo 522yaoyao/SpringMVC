@@ -26,7 +26,8 @@
 <td><%=stList.get(i).getId()%></td>
 <td><%=stList.get(i).getAge()%></td>
 <td><%=stList.get(i).getName()%></td>
-<td><a href="preSave.do?id=<%=stList.get(i).getId()%>">修改</a></td>
+<td><a href="<%=request.getContextPath()%>/student/preSave.do?id=<%=stList.get(i).getId()%>">修改</a>&nbsp;&nbsp;
+       <a href="<%=request.getContextPath()%>/student/delete.do?id=<%=stList.get(i).getId()%>">删除</a></td>
 </tr>
 <%} %>
 </table>

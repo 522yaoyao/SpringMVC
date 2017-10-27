@@ -50,9 +50,16 @@ public class StudentController {
 			s.setName(student.getName());
 			s.setAge(student.getAge());
 		}else{//Ìí¼Ó
-			studentList.add(student);			
+			studentList.add(student);	
+			student.setId(studentList.size());
 		}
 		// return "redirect:/student/list.do";
+		return "forward:/student/list.do";
+	}
+	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam(value="id") String id){
+		studentList.remove(Integer.parseInt(id)-1);
 		return "forward:/student/list.do";
 	}
          

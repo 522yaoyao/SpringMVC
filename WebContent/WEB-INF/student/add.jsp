@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="save.do" method="post">
+<form action="<%=request.getContextPath()%>/student/save.do" method="post">
 <table>
 	<tr>
 		<th colspan="2">学生添加</th>
