@@ -26,6 +26,7 @@ public class StudentController {
 	
 	@RequestMapping("/list")	
 	public ModelAndView list(){
+		System.out.println("student/list");
 		ModelAndView mav=new ModelAndView();
 		mav.addObject("studentList",studentList);
 		mav.addObject("message", message);

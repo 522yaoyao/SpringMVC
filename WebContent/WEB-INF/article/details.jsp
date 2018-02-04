@@ -8,5 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources2/css.css"/>
 </head>
 <body>
+
+
 </body>
 </html>

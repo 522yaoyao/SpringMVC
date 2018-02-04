@@ -8,5 +8,6 @@
 <body>
 欢迎
 <a  href="student/list.do">点击链接</a>
+<a  href="login.jsp">跳转</a>
 </body>
 </html>
